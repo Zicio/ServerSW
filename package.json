@@ -1,0 +1,41 @@
+{
+  "name": "serversw",
+  "version": "1.0.0",
+  "description": "server",
+  "main": "server.js",
+  "scripts": {
+    "start": "forever server.js",
+    "watch": "forever -w server.js",
+    "lint": "eslint ."
+  },
+  "engines": {
+    "node": "17.x"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Zicio/ServerSW.git"
+  },
+  "author": "Zicio",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Zicio/ServerSW/issues"
+  },
+  "homepage": "https://github.com/Zicio/ServerSW#readme",
+  "dependencies": {
+    "@koa/cors": "^3.1.0",
+    "@koa/router": "^10.1.1",
+    "forever": "^4.0.3",
+    "koa": "^2.13.4",
+    "koa-body": "^4.2.0",
+    "uuid": "^8.3.2",
+    "@faker-js/faker": "^6.0.0-beta.0"
+  },
+  "devDependencies": {
+    "eslint": "^7.32.0",
+    "eslint-config-koa": "^2.0.2",
+    "eslint-plugin-import": "^2.25.4",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^5.2.0",
+    "eslint-plugin-standard": "^5.0.0"
+  }
+}
