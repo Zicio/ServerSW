@@ -20,7 +20,7 @@ app.use(koaBody({
   json: true
 }));
 
-const news = [];
+let news = [];
 
 router.get('/news', async ctx => {
   for (let i = 0; i < 3; i++) {
@@ -35,6 +35,7 @@ router.get('/news', async ctx => {
   ctx.response.status = 200;
   ctx.response.body = news;
   console.log(ctx.response.body);
+  news = [];
 });
 
 app.use(router.routes()).use(router.allowedMethods());
